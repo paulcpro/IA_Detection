@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# Models and images
+./Fortnite_Detection/models/
+./Fortnite_Detection/images/
+./Simple_Detection/models/
+./Simple_Detection/images/
+
 # Distribution / packaging
 .Python
 build/
