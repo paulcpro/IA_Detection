@@ -4,21 +4,17 @@ import numpy as np
 import time
 from ultralytics import YOLO
 
-# Charger le modèle YOLOv8
+# Charger le modèle personnalisé
 # model = YOLO("last.pt")  # Utilise un modèle léger pour meilleures performances
 model = YOLO("./models/best.pt")  # Utilise un modèle léger pour meilleures performances
 
 # Définir une zone de capture (None pour plein écran)
 screen_region = {"top": 200, "left": 100, "width": 1000, "height": 800}
-# screen_region = None  # Ex: {"top": 100, "left": 100, "width": 800, "height": 600}
 
 # Classes à détecter (laisser None pour tout détecter)
-# allowed_classes = ["person", "car", "truck", "dog", "cat"]  # Exemple pour un jeu
-allowed_classes = None  # Exemple pour un jeu
-# allowed_classes = ["car", "truck"]  # Exemple pour un jeu
-# allowed_classes = ["person", "head"]  # Exemple pour un jeu
+allowed_classes = None
 
-print(model.names)  # Afficher les classes détectées
+print(model.names)  # Afficher les classes détectéesc
 
 with mss.mss() as sct:
     prev_time = 0  # Pour calculer le FPS
